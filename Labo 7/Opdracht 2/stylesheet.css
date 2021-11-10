@@ -1,6 +1,6 @@
 @font-face {
     font-family: "Pokemon";
-    src: url("pokemon/pokemonsolidnormal-xywr-webfont.woff") format("woff");
+    src: url("Nieuwe map/pokemonsolidnormal-xywr-webfont.woff") format("woff");
 }
 body{
     margin: auto;
@@ -24,6 +24,30 @@ body{
     -webkit-text-stroke: 2px blue;
     font-size: 25px;
 }
+.navbar ul{
+    list-style-type: none;
+    margin: 5px;
+    padding: 0;
+    overflow: hidden;
+    background-color: gray;
+    opacity: 0.6;
+}
+.navbar li{
+    float: left;
+}
+.navbar li a{
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 10px 12px;
+    text-decoration: none;
+    font-size: 30px;
+    font-family: Pokemon;
+    color:darkgoldenrod;
+}
+.navbar li a:hover{
+    background-color: #111;
+}
 .list{
     font-family: Tahoma;
     background: linear-gradient(90deg, rgba(248,0,255,0.01) 0%, rgba(73,9,121,0.5) 35%, rgba(34,2,215,0.5) 100%);
@@ -34,15 +58,16 @@ body{
 
 }
 .links{
-    background-color: darkgrey  ;
     margin: 5px;
     padding: 15px;
     text-align: center;
     font-size: 30px;
-    font-family: Tahoma;
+    font-family: Pokemon;
     font-weight: bold;
 }
 a{
     text-decoration: none;
-    color: blue;
+    color: darkgoldenrod;
+    -webkit-text-stroke: 2px blue;
+    letter-spacing: 2px;
 }
