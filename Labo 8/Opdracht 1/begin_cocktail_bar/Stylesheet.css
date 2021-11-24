@@ -1,5 +1,56 @@
+header{
+    text-align: center;
+}
+
+body{
+    font-family: Verdana;
+    font-size: 1.2em;
+    padding: 5%;
+}
+
+h1{
+    color: #007e7e;
+    font-size: 150%;
+}
+
+h2{
+    color: #007e7e;
+    font-size: 130%;
+}
+
 .weekly_specials{
     border: 1px solid black;
     padding: 10px;
     box-sizing: border-box;
+    width: 30%;
+    text-align: center;
+    float: right;
+    background-image: url("images/cocktail.gif");
+    background-repeat: repeat-x;
+}
+.weekly_specials h1{
+    color: black;
+}
+.weekly_specials h2{
+    color: indianred;
+}
+.weekly_specials a:hover{
+    background-color: saddlebrown;
+    color: black;
+}
+
+footer{
+    font-size: 50%;
+}
+
+section #guarantee{
+    margin: 30px;
+    margin-right: 500px;
+    padding: 20px;
+    border: 1px dotted white;
+    background-color: #a7cece;
+    box-sizing: border-box;
+    background-image: url("images/background.gif");
+    background-repeat: no-repeat;
+    color: #444444;
 }
