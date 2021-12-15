@@ -33,6 +33,12 @@ header{
     .snelmenu{
         width: 600px;
     }
+    .main-recipe{
+        width: 600px;
+    }
+    .recommend{
+        width: 600px;
+    }
 }
 @media only screen and (min-width: 770px){
     header{
@@ -41,13 +47,31 @@ header{
     .snelmenu{
         width: 750px;
     }
+    .main-recipe{
+        width: 750px;
+    }
+    .recommend{
+        width: 750px;
+    }
 }
+
 @media only screen and (min-width: 1000px){
     header{
         width: 980px;
     }
     .snelmenu{
         width: 980px;
+    }
+    .main-recipe{
+        width: 980px;
+    }
+    .recommend{
+        width: 980px;
+    }
+}
+@media only screen and (min-width: 800px){
+    .main-header{
+        font-size: 5em;
     }
 }
 .snelmenu{
@@ -58,6 +82,7 @@ header{
     display: grid;
     grid-template-columns: auto auto auto auto auto auto auto;
     margin: auto;
+    font-size: 13px;
 }
 .snelmenu span{
     display: block;
@@ -68,10 +93,94 @@ header{
 .snelmenu span:last-child {
     border-right: 0px;
 }
-.snelmenu span:hover{
-    text-decoration: underline 1px solid #fff100;
+.snelmenu span a:hover{
+    text-decoration: underline 2px solid #fff100;
 }
-.main.main-header{
-    background-image: url("images/headerimage.jpg");
+.snelmenu a{
+    color:#5b4746;
+    font-size: 13px;
+    text-decoration: none;
+}
+.main{
+    border-top: 1px solid #ebe8e8;
+}
+.main-header{
+    background-image:  url("images/headerimage.jpg");
     height: 500px;
+    width: 100%;
+    color:white;
+    font-size: 40px;
+    text-align: center;
+    margin: auto;
+    padding-top: 210px;
+    background-size: cover;
+    text-shadow: 2px 2px #8D99AE;
 }
+.main-recipe{
+    margin-top: 50px;
+    margin: auto;
+}
+.recipe_main_item {
+    border-top: 1px solid #ddd;
+    display: grid;
+    grid-template-columns: auto auto;
+}
+
+.recipe_main_item h3{
+    text-transform: uppercase;
+    font-size: 1.2em;
+    letter-spacing: 1px;
+    color: #ff4d56;
+}
+.recipe_main_item h2 a{
+    text-decoration: none;
+    color: black;
+}
+.recipe_main_item .description{
+    color: #666;
+    line-height: 2;
+}
+.recipe_main_item .author{
+    padding-right: 10px;
+    border-right: 1px solid #ebe8e8;
+    float: left;
+}
+.recipe_main_item .date{
+    color: #666;
+    padding-left: 10px;
+    float: left;
+}
+.recipe_main_item.image{
+    width: 100%;
+    height: auto;
+    display: block;
+}
+.recommend{
+    margin-top: 50px;
+    margin: auto;
+}
+.pictures{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-gap: 25px;
+}
+.footer{
+
+    line-height: 2em;
+    align-content: center;
+    margin: auto;
+}
+.footer #left{
+    float: left;
+    text-align: right;
+    width: 50%;
+}
+.footer #right{
+    float: left;
+    text-align:left;
+    color: white;
+    background-color: black;
+    width: 50%;
+}
+
+
