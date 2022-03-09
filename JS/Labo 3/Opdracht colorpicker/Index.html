@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="Styles/Style.css" rel="stylesheet">
+</head>
+<body>
+<div class="colorPicker">
+    <div class="components">
+        <input type="range" min="0" max="255" id="slider1" step="1" value="0" oninput="this.nextElementSibling.value = this.value">
+        <output>0</output>
+        <br>
+        <input type="range" min="0" max="255" id="slider2" step="1" value="0" oninput="this.nextElementSibling.value = this.value">
+        <output>0</output>
+        <br>
+        <input type="range" min="0" max="255" id="slider3" step="1" value="0" oninput="this.nextElementSibling.value = this.value">
+        <output>0</output>
+    </div>
+    <div class="swatch" id="swatch"></div>
+</div>
+<script src="Scripts/Script.js"></script>
+</body>
+</html>
