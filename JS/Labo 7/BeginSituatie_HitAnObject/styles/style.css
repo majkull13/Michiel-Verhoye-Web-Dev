@@ -1,6 +1,10 @@
 #playField{
-
-    // aanvullen met hoogte en breedte
+    height: 700px;
+    width: 600px;
+    border: 1px black solid;
+}
+img {
+    position: absolute;
 }
 
 

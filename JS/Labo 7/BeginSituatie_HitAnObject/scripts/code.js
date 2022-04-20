@@ -8,15 +8,28 @@ let global = {
     timeoutId: 0 // id van de timeout timer, zodat we die kunnen annuleren
 }
 const setup = () => {
-    let img = document.getElementById("bomb")
-    img.addEventListener("click", clickBomb)
+    let foto = document.getElementById("foto")
+    timerId = setInterval(moveFoto, 1000)
 }
 
 const clickBomb = () => {
     alert("BATS JONGE, ge zi dood")
 }
+const moveFoto = () => {
+    let foto = document.getElementById("foto")
+    let playField = document.getElementById("playField")
+    let random = Math.random() * 5
 
 
+    foto.setAttribute("src", "images/" + Math.floor(random) + ".png");
+    let maxLinks = playField.clientWidth - foto.offsetWidth;
+    let maxHoogte = playField.clientHeight - foto.offsetHeight;
+
+    let links = Math.floor(Math.random() * maxLinks);
+    let hoogte = Math.floor(Math.random() * maxHoogte);
+
+    foto.style.left = links + "px";
+    foto.style.top = hoogte + "px";
+
+}
 window.addEventListener("load", setup);
-
-
