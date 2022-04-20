@@ -1,0 +1,20 @@
+.colorPicker {
+    display: inline-block;
+    border: 1px solid black;
+    padding: 10px;
+}
+.components{
+    float: left;
+}
+input{
+    display: inline-block;
+}
+.swatch {
+    display: inline-block;
+    float: right;
+    border: solid 1px black;
+    border-radius: 5px;
+    margin: 0.5em 0 0 1em;
+    height: 4em;
+    width: 5em;
+}
