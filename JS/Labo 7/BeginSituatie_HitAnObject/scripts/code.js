@@ -8,28 +8,51 @@ let global = {
     timeoutId: 0 // id van de timeout timer, zodat we die kunnen annuleren
 }
 const setup = () => {
+    let button = document.getElementsByTagName("button")[0];
+    button.addEventListener("click", startGame);
     let foto = document.getElementById("foto")
-    timerId = setInterval(moveFoto, 1000)
+    foto.addEventListener("click", aantalHits)
 }
 
-const clickBomb = () => {
-    alert("BATS JONGE, ge zi dood")
+const startGame = () => {
+    timerId=setInterval(moveFoto, 3000)
+    let button = document.getElementsByTagName("button")[0];
+    button.style.display = 'none'
 }
+
+const aantalHits = () => {
+    let hits = document.getElementsByTagName("span")[0];
+
+    let foto = document.getElementById("foto");
+    if (foto.getAttribute("src") == "images/0.png")
+    {
+        clearInterval(timerId);
+        alert("GAME OVER");
+    }
+    else
+    {
+        hits.innerHTML ++;
+    }
+
+}
+
 const moveFoto = () => {
-    let foto = document.getElementById("foto")
-    let playField = document.getElementById("playField")
-    let random = Math.random() * 5
+    // Deze function wordt opgeroepen telkens de gebruiker
+    // op het speelveld klikt.
+    let foto=document.getElementById("foto");
+    let getal = Math.floor( Math.random() * 5);
+    foto.setAttribute("src", "images/"+ getal +".png")
+    let speelveld=document.getElementById("playField");
+    let maxLeft=speelveld.clientWidth - foto.offsetWidth;
+    let maxHeight=speelveld.clientHeight - foto.offsetHeight;
 
-
-    foto.setAttribute("src", "images/" + Math.floor(random) + ".png");
-    let maxLinks = playField.clientWidth - foto.offsetWidth;
-    let maxHoogte = playField.clientHeight - foto.offsetHeight;
-
-    let links = Math.floor(Math.random() * maxLinks);
-    let hoogte = Math.floor(Math.random() * maxHoogte);
-
-    foto.style.left = links + "px";
-    foto.style.top = hoogte + "px";
-
+    // verplaats de foto
+    let left=Math.floor(Math.random()*maxLeft);
+    let top=Math.floor(Math.random()*maxHeight);
+    foto.style.left=left+"px";
+    foto.style.top=top+"px";
 }
+
+
+
 window.addEventListener("load", setup);
