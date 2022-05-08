@@ -63,7 +63,7 @@ const update = () => {
     let swatch = document.getElementById("swatch");
     swatch.style.background = "rgb(" + red + "," + green + "," + blue + ")";
 
-    storeSliderValues();
+    storeSliderValues(red, green, blue);
 };
 
 
